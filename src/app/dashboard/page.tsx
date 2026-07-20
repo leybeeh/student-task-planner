@@ -171,26 +171,28 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-[#FFF7FB]">
       <nav className="sticky top-0 z-50 border-b border-pink-100 bg-[#B7E3F8]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-6">
           <div>
-            <h1 className="flex items-center gap-2 text-3xl font-bold text-pink-600">
+            <h1 className="flex items-center gap-2 text-2xl sm:text-3xl font-bold text-pink-600">
               <Sparkles className="text-pink-500" />
               Student Task Planner
             </h1>
 
-            <p className="mt-1 text-gray-600">
+            <p className="mt-1 text-sm sm:text-base text-gray-600">
               Kelola tugas kuliahmu dengan mudah
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="rounded-full bg-white px-5 py-2 font-medium text-gray-700 shadow">
-              {email}
+          <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto">
+            <div className="w-full rounded-full bg-white px-5 py-2 text-center font-medium text-gray-700 shadow sm:w-auto">
+              <p className="truncate">
+                {email}
+              </p>
             </div>
 
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 rounded-xl bg-[#F7B4CF] px-5 py-3 font-semibold text-white transition hover:scale-105"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#F7B4CF] px-5 py-3 font-semibold text-white transition hover:scale-105 sm:w-auto"
             >
               <LogOut size={18} />
               Logout
@@ -200,8 +202,8 @@ export default function DashboardPage() {
       </nav>
 
       <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="mb-10 rounded-[35px] bg-white p-10 shadow-lg">
-          <h2 className="text-4xl font-bold text-pink-600">
+        <div className="mb-10 rounded-[35px] bg-white p-6 sm:p-10 shadow-lg">
+         <h2 className="text-3xl sm:text-4xl font-bold text-pink-600">
             Halo 
           </h2>
 
@@ -211,7 +213,7 @@ export default function DashboardPage() {
             deadline, dan status penyelesaiannya.
           </p>
         </div>
-                <div className="mb-10 grid gap-6 md:grid-cols-3">
+                <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <div className="rounded-[30px] bg-white p-6 shadow-lg">
             <BookOpen
               size={40}
@@ -287,7 +289,7 @@ export default function DashboardPage() {
             🌸 Tambah Tugas Baru
           </h2>
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div>
               <label className="mb-2 block font-semibold text-gray-700">
                 📚 Mata Kuliah

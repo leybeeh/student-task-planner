@@ -22,7 +22,7 @@ export default function RegisterPage() {
   email,
   password,
   options: {
-    emailRedirectTo: "http://localhost:3000/auth/callback",
+    emailRedirectTo: "https://task-planner-kein.vercel.app/auth/callback",
   },
 });
 
@@ -36,19 +36,19 @@ export default function RegisterPage() {
 }
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#FFF7FB] px-6">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#FFF7FB] px-4 sm:px-6">
 
-      <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-pink-200/40 blur-3xl"></div>
+      <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 sm:h-80 sm:w-80 rounded-full bg-pink-200/40 blur-3xl"></div>
 
-      <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-sky-200/40 blur-3xl"></div>
+      <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 sm:h-96 sm:w-96 rounded-full bg-sky-200/40 blur-3xl"></div>
 
-      <div className="w-full max-w-md rounded-[35px] border border-pink-100 bg-white p-10 shadow-xl">
+      <div className="mx-auto w-full max-w-sm rounded-[30px] border border-pink-100 bg-white p-6 sm:max-w-md sm:p-10 shadow-xl">
 
         <div className="mb-8 text-center">
 
           <div className="mb-4 flex justify-center">
 
-            <div className="rounded-full bg-pink-100 p-4">
+            <div className="rounded-full bg-pink-100 p-3 sm:p-4">
 
               <Sparkles
                 size={34}
@@ -59,13 +59,13 @@ export default function RegisterPage() {
 
           </div>
 
-          <h1 className="text-4xl font-extrabold text-pink-600">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-pink-600 leading-tight">
 
             Student Task Planner
 
           </h1>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-sm sm:text-base text-gray-500">
 
             Buat akun baru untuk memulai
 
@@ -75,7 +75,7 @@ export default function RegisterPage() {
 
         <div className="mb-5">
 
-          <label className="mb-2 block font-semibold text-gray-700">
+          <label className="mb-2 block text-sm font-semibold text-gray-700">
 
             Email
 
@@ -93,7 +93,7 @@ export default function RegisterPage() {
               placeholder="Masukkan email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-transparent p-4 outline-none"
+              className="w-full bg-transparent p-3 sm:p-4 text-gray-900 caret-pink-600 placeholder:text-gray-400 outline-none"
             />
 
           </div>
@@ -102,7 +102,7 @@ export default function RegisterPage() {
 
         <div className="mb-6">
 
-          <label className="mb-2 block font-semibold text-gray-700">
+          <label className="mb-2 block text-sm font-semibold text-gray-700">
 
             Password
 
@@ -120,7 +120,7 @@ export default function RegisterPage() {
               placeholder="Masukkan password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-transparent p-4 outline-none"
+              className="w-full bg-transparent p-3 sm:p-4 text-gray-900 caret-pink-600 placeholder:text-gray-400 outline-none"
             />
 
           </div>
@@ -129,7 +129,7 @@ export default function RegisterPage() {
 
         <button
           onClick={handleRegister}
-          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#D97A9A] py-4 text-lg font-semibold text-white shadow-lg shadow-pink-300/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#C96687] hover:shadow-xl active:scale-95"
+          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#D97A9A] py-3 sm:py-4 text-base sm:text-lg font-semibold text-white shadow-lg shadow-pink-300/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#C96687] hover:shadow-xl active:scale-95"
         >
           <UserPlus size={20} />
 
@@ -138,7 +138,7 @@ export default function RegisterPage() {
 
         {message && (
 
-          <div className="mt-5 rounded-2xl bg-pink-100 p-4 text-center font-medium text-pink-700">
+          <div className="mt-5 rounded-2xl bg-pink-100 p-4 text-center font-medium text-pink-700 break-words">
 
             {message}
 
@@ -146,7 +146,7 @@ export default function RegisterPage() {
 
         )}
 
-        <p className="mt-8 text-center text-gray-500">
+        <p className="mt-8 text-center text-sm sm:text-base text-gray-500">
 
           Sudah punya akun?{" "}
 
